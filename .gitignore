@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.gradle/
+app/build/
+local.properties
+models/*.bin
+models/*.gguf
+.DS_Store
