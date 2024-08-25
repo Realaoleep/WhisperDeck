@@ -16,3 +16,15 @@ def main():
 
     out = Path("models") / f"ggml-{args.model}.bin"
     if out.exists():
+        print(f"already have {out}")
+        return 0
+    url = f"{BASE}/ggml-{args.model}.bin"
+    print(f"fetching {url}")
+    out.parent.mkdir(exist_ok=True)
+    urllib.request.urlretrieve(url, out)
+    print(f"saved {out}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
