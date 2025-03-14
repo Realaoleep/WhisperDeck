@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "If you use WhisperDeck, please cite it."
+title: WhisperDeck
+type: software
+authors:
+  - given-names: Pranshul
