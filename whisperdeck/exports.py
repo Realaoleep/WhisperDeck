@@ -22,3 +22,28 @@ def segments_to_srt(segments):
         out.append(f"{_stamp_srt(start)} --> {_stamp_srt(end)}")
         out.append(text)
         out.append("")
+    return "\n".join(out)
+
+
+def segments_to_vtt(segments):
+    out = ["WEBVTT", ""]
+    for start, end, text in segments:
+        out.append(f"{_stamp_vtt(start)} --> {_stamp_vtt(end)}")
+        out.append(text)
+        out.append("")
+    return "\n".join(out)
+
+
+def segments_to_md(segments):
+    out = ["| start | text |", "|---|---|"]
+    for start, _, text in segments:
+        out.append(f"| {_stamp_vtt(start)} | {text} |")
+    return "\n".join(out)
+
+
+def export_deck(deck, out_path, fmt="srt"):
+    """Export that concatenates per-file segment lists."""
+    writers = {"srt": segments_to_srt, "vtt": segments_to_vtt, "md": segments_to_md}
+    if fmt not in writers:
+        raise ValueError(f"unknown format {fmt}")
+    Path(out_path).write_text(writers[fmt]([]), "utf-8")
