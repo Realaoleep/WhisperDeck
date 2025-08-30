@@ -10,3 +10,10 @@ body:
       required: true
   - type: input
     id: version
+    attributes:
+      label: WhisperDeck version
+  - type: textarea
+    id: wav
+    attributes:
+      label: Audio properties
+      description: rate / channels / bit width of the failing file
