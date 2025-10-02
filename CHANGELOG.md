@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0] - 2025-10-02
+- exports reworked (srt/vtt/md), deck rewrite
+- Android demo: foreground recorder service
+
+## [1.2.0] - 2025-05-11
+- model registry + suggest_model
+- segment parser for -oj output
+
 ## [1.0.0] - 2024-06-20
 - first stable tag: transcribe + trim + tags
 - Android demo app skeleton
