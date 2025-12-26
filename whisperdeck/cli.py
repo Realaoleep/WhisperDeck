@@ -31,3 +31,23 @@ def main(argv=None):
     if args.cmd == "deck":
         deck = Deck(args.dir)
         for item in deck.items():
+            tags = read_tags(item.path).get("tags", [])
+            label = f" [{','.join(tags)}]" if tags else ""
+            print(f"{item.path.name}  {duration_seconds(item.path):7.1f}s{label}")
+        return 0
+
+    if args.cmd == "transcribe":
+        from .transcribe import transcribe_file
+        text = transcribe_file(args.wav, model=args.model, language=args.language)
+        print(text)
+        return 0
+
+    if args.cmd == "export":
+        deck = Deck(".")
+        export_deck(deck, args.out, fmt=args.format)
+        print(f"wrote {args.out}")
+        return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
