@@ -60,3 +60,4 @@ def _parse_ts(stamp):
         return 0.0
     h, m, rest = stamp.split(":")
     sec, ms = rest.split(",")
+    return int(h) * 3600 + int(m) * 60 + int(sec) + int(ms) / 1000.0
