@@ -20,3 +20,14 @@ def installed_models():
     for name in REGISTRY:
         p = model_path(name)
         if p.exists() and p.stat().st_size > 1_000_000:
+            found.append(name)
+    return found
+
+
+def suggest_model(duration_s, quality="balanced"):
+    """Pick a sensible default based on clip length."""
+    if duration_s < 120:
+        return "base.en" if quality != "max" else "small.en"
+    if duration_s < 3600:
+        return "base.en" if quality == "fast" else "small.en"
+    return "medium.en" if quality != "fast" else "base.en"
