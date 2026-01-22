@@ -3,3 +3,9 @@
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,34 L54,74 M44,42 L44,66 M64,42 L64,66 M34,50 L34,58 M74,50 L74,58"
+        android:strokeWidth="5"
+        android:strokeColor="#FFFFFF" />
