@@ -9,3 +9,9 @@ lint:
 	$(PY) -m compileall -q whisperdeck/
 
 deck:
+	$(PY) -m whisperdeck.deck list
+
+models:
+	$(PY) models/download.py --model base.en
+
+clean:
