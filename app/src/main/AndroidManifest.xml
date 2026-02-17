@@ -16,3 +16,10 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <service
+            android:name=".RecorderService"
+            android:foregroundServiceType="microphone"
+            android:exported="false" />
+    </application>
