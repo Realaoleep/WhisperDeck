@@ -11,3 +11,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "WhisperDeck"
+include(":app")
