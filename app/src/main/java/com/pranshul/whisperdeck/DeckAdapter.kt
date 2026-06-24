@@ -33,3 +33,4 @@ class DeckAdapter(private val onClick: (DeckItem) -> Unit) :
         holder.title.text = "${item.name} - ${item.ageDays}d"
         holder.itemView.setOnClickListener { onClick(item) }
     }
+}
