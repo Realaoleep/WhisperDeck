@@ -23,3 +23,4 @@
             android:foregroundServiceType="microphone"
             android:exported="false" />
     </application>
+</manifest>
