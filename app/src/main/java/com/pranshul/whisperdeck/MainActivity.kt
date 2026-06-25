@@ -47,3 +47,4 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadDeck(): List<DeckItem> =
         listOf(DeckItem("meeting-notes", 12), DeckItem("podcast-draft", 3))
+}
