@@ -14,3 +14,4 @@ python models/download.py --model base.en
 | medium.en | 1.5 GB | 769M | slow on phones, fine on desktop |
 | large-v3 | 2.9 GB | 1550M | multilingual, needs 5+ GB RAM |
 
+Models land in `models/` and are git-ignored.
