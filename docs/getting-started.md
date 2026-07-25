@@ -8,3 +8,4 @@
 6. `wd export deck.srt --format srt` writes subtitles.
 
 Everything stays local: the only network call ever made is the one-time
+model download.
