@@ -15,3 +15,4 @@ models:
 	$(PY) models/download.py --model base.en
 
 clean:
+	rm -rf build/ dist/ *.egg-info .pytest_cache/
