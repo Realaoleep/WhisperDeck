@@ -12,3 +12,4 @@ local.properties
 models/*.bin
 models/*.gguf
 .DS_Store
+*.tmp
